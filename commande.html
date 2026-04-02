@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de commande</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+        .sous-titre {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: 0.3s;
+            font-family: inherit;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #ff6b35;
+            box-shadow: 0 0 0 3px rgba(255,107,53,0.2);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .btn-submit {
+            background-color: #ff6b35;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #e55a2b;
+            transform: scale(1.02);
+        }
+        .btn-back {
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+            text-decoration: none;
+            color: #ff6b35;
+            font-weight: 500;
+        }
+        .btn-back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>📝 Informations de commande</h1>
+        <div class="sous-titre">Veuillez remplir tous les champs ci-dessous</div>
+        
+        <form action="#" method="post" onsubmit="alert('Merci pour votre commande ! (version de démonstration)'); return false;">
+            <div class="form-group">
+                <label>Nom complet *</label>
+                <input type="text" placeholder="Ex: Ahmed Benali" required>
+            </div>
+            <div class="form-group">
+                <label>Adresse de livraison *</label>
+                <input type="text" placeholder="Rue, ville, code postal" required>
+            </div>
+            <div class="form-group">
+                <label>Téléphone *</label>
+                <input type="tel" placeholder="+213 5XXXXXX" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="exemple@domaine.com">
+            </div>
+            <div class="form-group">
+                <label>Notes supplémentaires (optionnel)</label>
+                <textarea placeholder="Préférences, instructions de livraison..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">✅ Confirmer la commande</button>
+        </form>
+        <a href="index.html" class="btn-back">← Retour à l'accueil</a>
+    </div>
+</body>
+</html>
